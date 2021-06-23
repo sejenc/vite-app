@@ -1,17 +1,33 @@
 <template>
   <div class="login-form">
-    <form>
+    <form @submit.prevent="onSubmit">
       <fieldset>
         <legend>Login</legend>
         <div>
           <label for="email">email address</label>
-          <input id="email" type="text" required>
+          <input 
+            v-model="email" 
+            id="email" 
+            type="text" 
+            required
+          >
         </div>
         <div>
           <label for="password">password</label>
-          <input id="password" type="password" required>
+          <input 
+            v-model="password" 
+            id="password" 
+            type="password"
+            minlength="6" 
+            required
+          >
         </div>
-        <button>Login</button>
+        <button
+          type="submit" 
+          :disabled="!isEmailValid"
+        >
+          Login
+        </button>
       </fieldset>
     </form>
   </div>
@@ -19,7 +35,25 @@
 <script>
   export default {
     data () {
-      return {}
+      return {
+        email: '',
+        password: ''
+      }
+    },
+    methods: {
+      onSubmit () {
+        alert('Login successful!')
+        this.resetForm()
+      },
+      resetForm () {
+        this.email = ''
+        this.password = ''
+      }
+    },
+    computed: {
+      isEmailValid () {
+        return /^([a-z]){1,}@([a-z]){1,}.com/.test(this.email)
+      }
     }
   }
 </script>
@@ -72,6 +106,7 @@ fieldset > div input {
 }
 button {
   width: 100%;
+  padding: 1em;
   border: none;
   color: #FFFFFF;
   background-color: #217BC7;
