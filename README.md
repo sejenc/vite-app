@@ -1,3 +1,11 @@
+# Running a local instance
+This application uses Vite to run a local dev server and to execute a build.
+
+Step: 1
+- from terminal execute `npm install`
+Step: 2
+- to start local dev server execute `npm run dev`
+
 # Acceptance Criteria
 
 A user should be able to enter a valid email address and a password in the form input fields, and see that the submit button become active. The submit button should be disabled until the following criteria are met:
