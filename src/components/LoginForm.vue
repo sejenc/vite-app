@@ -57,7 +57,7 @@
     }
   }
 </script>
-<style>
+<style lang="scss">
 .login-form {
   background-color: #FFFFFF;
   border: none;
@@ -69,29 +69,29 @@ form {
 fieldset {
   margin: 0;
   border: none;
-}
-fieldset legend {
-  margin-bottom: 1rem;
-  font-weight: bold;
-  font-size: 1.8em;
-}
-fieldset label {
-  color: #6E7381;
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 12px;
-  letter-spacing: .1rem;
-}
-fieldset > div {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 2em;
-}
-fieldset > div input {
-  margin-top: 1em;
-  padding: 1em;
-  font-size: 1em;
-  border: 1px solid #E5E7EB;
+  legend {
+    margin-bottom: 1rem;
+    font-weight: bold;
+    font-size: 1.8em;
+  }
+  label {
+    color: #6E7381;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 12px;
+    letter-spacing: .1rem;
+  }
+  > div {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2em;
+    input {
+        margin-top: 1em;
+        padding: 1em;
+        font-size: 1em;
+        border: 1px solid #E5E7EB;
+    }
+  }
 }
 button {
   width: 100%;

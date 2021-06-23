@@ -15,6 +15,7 @@
 <style>
 body {
   margin: 0;
+  font-size: 16px;
   height: calc(100vh);
   background-color: #F4F5F7;
   display: flex;
