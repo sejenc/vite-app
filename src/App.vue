@@ -1,14 +1,25 @@
 <template>
   <div>
-    {{ title }}
+    <form>
+      <fieldset>
+        <legend>Login</legend>
+        <div>
+          <label for="email">email address</label>
+          <input id="email" type="text" required>
+        </div>
+        <div>
+          <label for="password">password</label>
+          <input id="password" type="password" required>
+        </div>
+        <button>Login</button>
+      </fieldset>
+    </form>
   </div>
 </template>
 <script>
   export default {
     data () {
-      return {
-        title: 'Politico FE - task'
-      }
+      return {}
     }
   }
 </script>
