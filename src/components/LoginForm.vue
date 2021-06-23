@@ -23,7 +23,8 @@
           >
         </div>
         <button
-          type="submit" 
+          type="submit"
+          :class="{disabled: !isEmailValid}" 
           :disabled="!isEmailValid"
         >
           Login
@@ -101,5 +102,9 @@ button {
   background-color: #217BC7;
   border-radius: 26px;
   font-size: 1em;
+}
+button.disabled {
+  background-color: #e5e7eb;
+  color: rgba(39, 44, 63, 0.5);
 }
 </style>
