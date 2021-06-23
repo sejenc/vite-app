@@ -3,6 +3,7 @@ This application uses Vite to run a local dev server and to execute a build.
 
 Step: 1
 - from terminal execute `npm install`
+
 Step: 2
 - to start local dev server execute `npm run dev`
 
